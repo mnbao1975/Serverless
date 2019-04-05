@@ -63,6 +63,14 @@ Make sure that your S3 bucket is public. Then follow these additional setup step
   </RoutingRule>
 </RoutingRules>
 ```
+You will need to replace `your_api_endpoint` part with the URL of your Serverless endpoint. You can find out what’s the endpoint URL by running:
+
+```
+serverless info
+```
+
+or observing the output of the deployment step.
+
 3. Choose Permissions. Add Bucket Policy. Add a bucket policy to allow anonymous access
 ```
 {
@@ -78,15 +86,6 @@ Make sure that your S3 bucket is public. Then follow these additional setup step
     ]
 }
 ```
-
-
-You will need to replace `your_api_endpoint` part with the URL of your Serverless endpoint. You can find out what’s the endpoint URL by running:
-
-```
-serverless info
-```
-
-or observing the output of the deployment step.
 
 ## Any questions or suggestions?
 
