@@ -63,7 +63,7 @@ Make sure that your S3 bucket is public. Then follow these additional setup step
   </RoutingRule>
 </RoutingRules>
 ```
-3. Choose Permissions, Add Bucket Policy. Add a bucket policy to allow anonymous access
+3. Choose Permissions. Add Bucket Policy. Add a bucket policy to allow anonymous access
 ```
 {
     "Version": "2012-10-17",
