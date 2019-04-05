@@ -10,4 +10,4 @@ else
   key=$2
 fi;
 
-aws ssm put-parameter --name $key --value $value --type SecureString --region us-east-1 --overwrite
+aws ssm put-parameter --name $key --value $value --type SecureString --region ap-southeast-1 --overwrite

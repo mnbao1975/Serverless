@@ -8,7 +8,8 @@ plugins:
 provider:
   name: aws
   runtime: nodejs8.10
-  profile: dev-fii
+  profile: bao-gloco
+  region: ${opt:region, 'ap-southeast-1'}
 
   usagePlan:
     quota:
@@ -22,7 +23,7 @@ provider:
 custom:
   serviceName: image-resizing
   stage: ${opt:stage, self:custom.defaultStage}
-  bucket: dynamic-image-resizing
+  bucket: research-resized-images
   webpack:
     includeModules:
       forceExclude:
@@ -43,19 +44,19 @@ functions:
           method: get
     environment:
       # Provide your bucket name here
-      BUCKET: dynamic-image-resizing
-      REGION: us-east-1
+      BUCKET: research-resized-images
+      REGION: ${opt:region, 'ap-southeast-1'}
     # layers:
     #   - {Ref: ImageLibsLambdaLayer}
     iamRoleStatements:
       - Effect: "Allow"
         Action:
           - "s3:GetObject"
-        Resource: "arn:aws:s3:::dynamic-image-resizing/*"
+        Resource: "arn:aws:s3:::research-resized-images/*"
       - Effect: "Allow"
         Action:
           - "s3:PutObject"
-        Resource: "arn:aws:s3:::dynamic-image-resizing/*"
+        Resource: "arn:aws:s3:::research-resized-images/*"
 
 package:
   exclude:

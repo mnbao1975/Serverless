@@ -63,6 +63,22 @@ Make sure that your S3 bucket is public. Then follow these additional setup step
   </RoutingRule>
 </RoutingRules>
 ```
+3. Choose Permissions, Add Bucket Policy. Add a bucket policy to allow anonymous access
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AddPerm",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::your-images-budget/*"
+        }
+    ]
+}
+```
+
 
 You will need to replace `your_api_endpoint` part with the URL of your Serverless endpoint. You can find out what’s the endpoint URL by running:
 

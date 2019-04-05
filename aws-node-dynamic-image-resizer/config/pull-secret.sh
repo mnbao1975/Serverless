@@ -7,4 +7,4 @@ else
   key=$1
 fi;
 
-aws ssm get-parameter --name $key --region us-east-1 --with-decryption
+aws ssm get-parameter --name $key --region ap-southeast-1 --with-decryption

@@ -1,7 +1,7 @@
 import * as AWS from 'aws-sdk'
 import stream from 'stream'
 
-AWS.config.region = 'us-east-1'
+AWS.config.region = process.env.REGION
 const S3 = new AWS.S3()
 
 class S3Handler {
