@@ -1,13 +1,13 @@
 {
   "type": "service_account",
-  "project_id": "ghealth-162308",
-  "private_key_id": "9b16a6e91ab9a93501dcac44582fd439676dd37d",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC3YApOHmhb41Jt\nb3HirSVtzCTjyiHEAngDXYB450h1idRv9ChKq9V/ayyyUbqx4tkSAxw3ZA1WwfUW\nWr+6mN+weyIPcJfUHbO+TFwI0saI0Lx8IlDqHrQSp/yvwvsF2WPkw9Uo3pI6ytTp\nISZvWnkhWt6sv1DREb4+Ckf9l3uM+tK+BUZzKCaC7lH5rykC1ssI6vanY+wmTujz\n0btpvaErQlUiEG0cLCUwfjl36qnVMVbAcbnVn3CBKSFNuyC45rU5TnzWZV/sNG8f\n+SpaTpKDgVlwmoaMjVZ+tGSxQFvIDQIu8BDBrYonYlxFICvZIU9mfb0SdKoKOCce\n1UvxkVlzAgMBAAECggEABVaydhvEhghUOgNomWTZFh0/ZbJY0VARFmf+eYaiQWnF\n2YyOL75Y9OC16GsguFUWZMPaanJrQP9cl04FDvWsbYLoNvLcOLy0ovGuLEOWrB0H\nn8WP/YDvVSu225cdn8n4coyRBCOWtkd5c2AXsl478JCosvbO74dItp2uAuAKJMyL\n/L19zPJzYPSoVtTwWvaL3xbt9plLeiLD1OkCO/Tj1027gjutqp6RAlVah5ZtMAZJ\nmR/5ldxzh+0xAJ5w4XB3bsQwgPoIrqFySR8L0Dfpu1+uXJwPV5xRBncJgKVAkocj\nLv8s/VnM49GPaMV7od8NNYd/Ll6UN1j6CJ6zUVfWgQKBgQDjVDQdzxumPhaTKvF5\nlbuqiMvP22DHSN6PfdTEPoWfB3xLzHdcP+R84cQaHnEws0tJ4yjd4pDhK+YN1OpQ\nPoiZ4xQBzfY2Lyh+/A52vR834L4lcVqE6blDc+NYGpaYmzk/QdBoYh56YXgbXeCt\nnHMZlmMgF6QjZ7RPoY8xomsYQwKBgQDOgLI6BjqcywKBsZaduolN5kDSVPeYVEhe\n3xDwD/cYp5ZuPHuPv0R8txBp0qM7FaAQKdHjN3rItTtwE3TW7y9MR0B7acVY4LgX\ngrtZAzE9NrLen+5vs4LzASXZpVIecQaEYld5nF3sIm7rQdQZ9o0PF+zmQWvRgzoh\nVoipD+7/EQKBgH2CJM/8Y6CSEPaps+5T2+vYYOZekX0VX0NLzqeWeUGG6XoT5iZ5\nZBYKs7FT81xW8Q9XKl3u09xt1zL1xXQOQm7r70TbyL67pJkPYpDt84lvPKwBfF97\nhvyVxAQFkfWpZZ7mIEExQvCAVcaOOxi/EtEitZGnW8jsXaHFagCWUphvAoGAOF0o\nSG4q0WEX7g5q7eJcV8bhKofGjO10U3DPTrcM2s3jYXNgxnuOVfwhnsC/jQD6D29a\nuooKGX5eGtk0qvXeExPfpc/Y7clodgJY4JLefbbQW7OLgTGeLHXDvwRAxc5T2Q5+\nkdL8T9eWLuBo5C1HkzcUkkSJCUaoNzFHW93dfgECgYEAizvhSlH2CUVnMfm3yqCK\nJFaWHhq53/yxLavhCP+atbj3X1sEWgu8AIkYcdADDSyytxBhI2KO1mPrjG4rfqQG\npoJYabNsZf1Wzwje375O3ptbtS05m0jFBfduxszxcQFPJjfu7T9im3lcvFCKX4bz\nhrawrt89JKAMGrLDfKSLhsE=\n-----END PRIVATE KEY-----\n",
-  "client_email": "firebase-adminsdk-oqt23@ghealth-162308.iam.gserviceaccount.com",
-  "client_id": "115960585306323313215",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-oqt23%40ghealth-162308.iam.gserviceaccount.com"
+  "project_id": "",
+  "private_key_id": "",
+  "private_key": "",
+  "client_email": "",
+  "client_id": "",
+  "auth_uri": "",
+  "token_uri": "",
+  "auth_provider_x509_cert_url": "",
+  "client_x509_cert_url": ""
 }
 

@@ -1,0 +1,10 @@
+env:
+  region: 'ap-southeast-1'
+  profile: ''
+sns:
+  token-topic-arn: ''
+  mg-fb-topic-arn: ''
+mongo:
+  uri: ''
+  db: ''
+
