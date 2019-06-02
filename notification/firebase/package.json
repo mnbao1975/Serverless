@@ -10,6 +10,7 @@
   "author": "Bao Nguyen <bao.nguyen@gmail.com> (http://www.nrh-nguyen.com)",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
     "crypto": "^1.0.1",
     "firebase-admin": "^6.0.0"
   }
