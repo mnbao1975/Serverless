@@ -1,0 +1,19 @@
+env:
+  region: 'ap-southeast-1'
+  profile: 'gloco-bao.nguyen'
+sns:
+  ios-patient-platform-app-arn: 'arn:aws:sns:ap-southeast-1:336087288634:app/APNS/gHealth-Patient'
+  ios-doctor-platform-app-arn: 'arn:aws:sns:ap-southeast-1:336087288634:app/APNS/gHealth-Doctor'
+  android-patient-platform-app-arn: 'arn:aws:sns:ap-southeast-1:336087288634:app/APNS/Example-App'  
+  android-doctor-platform-app-arn: 'arn:aws:sns:ap-southeast-1:336087288634:app/APNS/Example-App'
+  token-topic-arn: 'arn:aws:sns:ap-southeast-1:336087288634:Notification-Device-Token'
+  # publish message to this topic, a lambda will process and send push notification
+  direct-msg-topic-arn: 'arn:aws:sns:ap-southeast-1:336087288634:Notification-Direct-Message'
+  # publish message to this topic, AWS SNS will send push notification to all endpoints subscribed to it.
+  broadcast-topic-arn: 'arn:aws:sns:ap-southeast-1:336087288634:Notification-Direct-Message'
+mongo:
+  #uri: 'admin:FreeOneForTest@testcluster-ekqx9.mongodb.net?retryWrites=true'
+  #db: 'test'
+  uri: 'notification:EB3Lv22urEbw6uA@cluster0-cxlxt.mongodb.net?retryWrites=true'
+  db: 'notification'
+

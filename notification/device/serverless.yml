@@ -1,0 +1,75 @@
+
+# Run
+# $ sls deploy -s dev
+service: device # NOTE: update this with your service name
+
+custom: ${file(./config.${opt:stage, 'dev'}.yml)}
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  apiKeys:
+    - ${opt:stage}-key    
+  stage: ${opt:stage, 'dev'}
+  region: ${self:custom.env.region}
+  profile: ${self:custom.env.profile}
+  environment:
+    TOKEN_TOPIC_ARN: ${self:custom.sns.token-topic-arn}    
+    IOS_DOCTOR_PLATFORM_APP_ARN: ${self:custom.sns.ios-doctor-platform-app-arn}
+    IOS_PATIENT_PLATFORM_APP_ARN: ${self:custom.sns.ios-patient-platform-app-arn}
+    ANDROID_DOCTOR_PLATFORM_APP_ARN: ${self:custom.sns.android-doctor-platform-app-arn}
+    ANDROID_PATIENT_PLATFORM_APP_ARN: ${self:custom.sns.android-patient-platform-app-arn}
+    DIRECT_MSG_TOPIC_ARN: ${self:custom.sns.direct-msg-topic-arn}
+    BROADCAST_TOPIC_ARN: ${self:custom.sns.broadcast-topic-arn}
+    MONGO_URI: ${self:custom.mongo.uri}
+    MONGO_DB: ${self:custom.mongo.db}
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - "sns:Publish"
+        - "sns:Subscribe"
+      Resource:
+        - ${self:provider.environment.TOKEN_TOPIC_ARN}
+        - ${self:provider.environment.DIRECT_MSG_TOPIC_ARN}
+        - ${self:provider.environment.IOS_PATIENT_PLATFORM_APP_ARN}
+        - ${self:provider.environment.IOS_DOCTOR_PLATFORM_APP_ARN}
+        - ${self:provider.environment.ANDROID_PATIENT_PLATFORM_APP_ARN}
+        - ${self:provider.environment.ANDROID_DOCTOR_PLATFORM_APP_ARN}
+    - Effect: 'Allow'
+      Action:
+        - "sns:CreatePlatformEndpoint"
+        - "sns:DeleteEndpoint"
+      Resource: "*"
+        
+functions:
+  create:
+    handler: token.create
+    events: # The Events that trigger this Function
+      - http: 
+          path: device
+          method: post
+          private: true
+
+  # update:
+  #   handler: token.update
+  #   events: # The Events that trigger this Function
+  #     - http: 
+  #         path: device
+  #         method: put
+  #         private: true    
+  
+  remove:
+    handler: token.remove
+    events: # The Events that trigger this Function
+      - http: 
+          path: device
+          method: delete
+          private: true
+
+  publish:
+    handler: notification.publish
+    events: # The Events that trigger this Function
+      - sns: ${self:provider.environment.DIRECT_MSG_TOPIC_ARN}
+
+# plugins:
+#   - serverless-offline

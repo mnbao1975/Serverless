@@ -1,0 +1,14 @@
+{
+  "name": "device",
+  "version": "1.0.0",
+  "description": "",
+  "main": "notification.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Bao Nguyen <bao.nguyen@gmail.com> (http://www.nrh-nguyen.com)",
+  "license": "ISC",
+  "dependencies": {    
+  }
+}
