@@ -1,0 +1,9 @@
+env:
+  region: 'ap-southeast-1'
+  profile: 'bao.nguyen'
+sns:
+  token-topic-arn: 'arn:aws:sns:ap-southeast-1:...'
+mongo:
+  uri: 'username:pass@cluster-abc.mongodb.net?retryWrites=true'
+  db: 'dbname'
+

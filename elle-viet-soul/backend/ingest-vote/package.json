@@ -1,0 +1,13 @@
+{
+  "name": "ingest-vote",
+  "version": "1.0.0",
+  "description": "Receive and valid vote, then publish the vote to a topic on SNS",
+  "main": "vote.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Bao Nguyen <bao.nguyen@gmail.com> (http://www.nrh-nguyen.com)",
+  "license": "ISC",
+  "dependencies": {}
+}

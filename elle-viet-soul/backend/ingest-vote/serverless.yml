@@ -1,0 +1,37 @@
+
+# Run
+# $ sls deploy -s dev
+service: elle-viet-soul # NOTE: update this with your service name
+
+custom: ${file(./config.${opt:stage, 'dev'}.yml)}
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  apiKeys: # x-api-key header
+    - ${opt:stage}-key    
+  stage: ${opt:stage, 'dev'}
+  region: ${self:custom.env.region}
+  profile: ${self:custom.env.profile}
+  environment:
+    VIET_SOUL_SNS_ARN: ${self:custom.sns.viet-soul-topic-arn}    
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - "sns:Publish"
+        - "sns:Subscribe"
+      Resource:
+        - ${self:provider.environment.VIET_SOUL_SNS_ARN}
+
+functions:
+  ingest:
+    handler: vote.ingest
+    events: # The Events that trigger this Function
+      - http: 
+          path: vote
+          method: post
+          private: true
+
+  
+# plugins:
+#   - serverless-offline

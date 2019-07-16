@@ -1,0 +1,24 @@
+# Run
+# $ sls deploy -s dev
+
+service: api-gateway # NOTE: update this with your service name
+custom: ${file(./config.${opt:stage, 'dev'}.yml)}
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: ${opt:stage, 'dev'}
+  region: ${self:custom.env.region}
+  profile: ${self:custom.env.profile}
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+     - http:
+         path: hello
+         method: get
+
+plugins:
+  - serverless-offline
+  - serverless-domain-manager
